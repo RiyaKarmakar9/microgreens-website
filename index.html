@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Auviro Microgreens</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background:#0b1f14;
+color:white;
+}
+
+/* NAV */
+.nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 30px;
+background:rgba(0,0,0,0.6);
+position:fixed;
+width:100%;
+top:0;
+}
+
+.nav img{
+height:45px;
+border-radius:8px;
+}
+
+.nav a{
+color:white;
+margin:0 10px;
+text-decoration:none;
+}
+
+/* HERO */
+.hero{
+height:100vh;
+background:url('microgreens.jpeg') center/cover no-repeat;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+position:relative;
+}
+
+.hero::after{
+content:"";
+position:absolute;
+top:0;left:0;
+width:100%;height:100%;
+background:rgba(0,0,0,0.6);
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+}
+
+.hero h1{
+font-size:50px;
+color:#00ff88;
+}
+
+.btn{
+padding:12px 25px;
+background:#00ff88;
+border:none;
+border-radius:25px;
+font-weight:bold;
+cursor:pointer;
+}
+
+/* SECTION */
+.section{
+padding:80px 20px;
+max-width:900px;
+margin:auto;
+}
+
+.section h2{
+color:#00ff88;
+}
+
+.section p{
+line-height:1.8;
+opacity:0.9;
+}
+
+/* CTA */
+.cta{
+background:#00c853;
+color:black;
+padding:50px;
+text-align:center;
+border-radius:15px;
+margin:40px 20px;
+}
+
+.footer{
+text-align:center;
+padding:20px;
+background:black;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAV -->
+<div class="nav">
+
+    <img src="logo.jpeg" alt="Logo">
+
+    <div>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+</div>
+
+<!-- HERO -->
+<div class="hero" id="home">
+
+    <div class="hero-content">
+        <h1>Microgreens India 🌱</h1>
+        <p>Grow Healthy. Grow Wealthy.</p>
+        <button class="btn">Get Started</button>
+    </div>
+
+</div>
+
+<!-- ABOUT -->
+<div class="section" id="about">
+
+<h2>About Microgreens</h2>
+
+<p>
+Microgreens are nutrient-rich young plants harvested in 7–15 days.
+They are used in hotels, gyms, and modern healthy lifestyles.
+This is a fast-growing business opportunity in India.
+</p>
+
+</div>
+
+<!-- CTA -->
+<div class="cta" id="contact">
+
+<h2>Start Your Microgreens Business</h2>
+
+<p>Contact: +91-XXXXXXXXXX</p>
+
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+© 2026 Microgreens India
+</div>
+
+</body>
+</html>
