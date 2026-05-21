@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Microgreens India</title>
+<title>Auviro Microgreens</title>
 
 <style>
 
@@ -11,53 +11,44 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
+font-family:Arial, sans-serif;
 scroll-behavior:smooth;
 }
 
 body{
-font-family:Arial, sans-serif;
-background:#0b1f14;
+background:#070c09;
 color:white;
 }
 
-/* NAVBAR */
+/* NAV */
 .nav{
 position:fixed;
 top:0;
-left:0;
 width:100%;
-height:70px;
-background:rgba(0,0,0,0.75);
-backdrop-filter: blur(10px);
 display:flex;
-align-items:center;
 justify-content:space-between;
-padding:0 40px;
+align-items:center;
+padding:18px 60px;
+background:rgba(0,0,0,0.6);
+backdrop-filter: blur(12px);
 z-index:1000;
 }
 
-/* LOGO */
 .nav img{
 height:45px;
-width:auto;
-border-radius:8px;
+border-radius:10px;
 }
 
-/* MENU */
-.nav-links{
-display:flex;
-gap:25px;
-}
-
-.nav-links a{
+.nav a{
 color:white;
 text-decoration:none;
-font-size:15px;
+margin:0 15px;
+font-size:14px;
 opacity:0.8;
 transition:0.3s;
 }
 
-.nav-links a:hover{
+.nav a:hover{
 color:#00ff88;
 opacity:1;
 }
@@ -71,7 +62,6 @@ align-items:center;
 justify-content:center;
 text-align:center;
 position:relative;
-padding:20px;
 }
 
 .hero::after{
@@ -81,31 +71,32 @@ top:0;
 left:0;
 width:100%;
 height:100%;
-background:rgba(0,0,0,0.6);
+background:linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.95));
 }
 
 .hero-content{
 position:relative;
 z-index:2;
-max-width:800px;
-margin-top:70px;
+max-width:900px;
+padding:20px;
 }
 
 .hero h1{
-font-size:55px;
+font-size:70px;
 color:#00ff88;
-margin-bottom:15px;
+letter-spacing:3px;
 }
 
 .hero p{
 font-size:18px;
-opacity:0.9;
+margin-top:15px;
+opacity:0.85;
 line-height:1.6;
 }
 
 .btn{
-margin-top:20px;
-padding:12px 28px;
+margin-top:25px;
+padding:14px 30px;
 background:#00ff88;
 border:none;
 border-radius:30px;
@@ -116,36 +107,63 @@ cursor:pointer;
 /* SECTION */
 .section{
 padding:100px 20px;
-max-width:1000px;
+max-width:1100px;
 margin:auto;
 }
 
 .section h2{
-color:#00ff88;
-font-size:32px;
-margin-bottom:20px;
 text-align:center;
+font-size:38px;
+color:#00ff88;
+margin-bottom:40px;
 }
 
-.section p{
+/* GRID */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:rgba(255,255,255,0.05);
+padding:25px;
+border-radius:15px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+background:rgba(0,255,136,0.1);
+}
+
+.card h3{
+color:#00ff88;
+margin-bottom:10px;
+}
+
+/* ABOUT */
+.about{
+text-align:center;
+max-width:800px;
+margin:auto;
 line-height:1.8;
 opacity:0.9;
 font-size:17px;
-text-align:center;
 }
 
 /* CTA */
 .cta{
-background:linear-gradient(135deg,#00c853,#64dd17);
+background:linear-gradient(135deg,#00ff88,#00c853);
 color:black;
 text-align:center;
-padding:60px 20px;
+padding:70px 20px;
 border-radius:20px;
 margin:60px 20px;
 }
 
 .cta h2{
-font-size:30px;
+font-size:32px;
 margin-bottom:10px;
 }
 
@@ -158,25 +176,20 @@ margin-top:10px;
 /* FOOTER */
 .footer{
 text-align:center;
-padding:20px;
+padding:25px;
 background:black;
 opacity:0.8;
 }
 
-/* MOBILE RESPONSIVE */
+/* MOBILE */
 @media(max-width:768px){
 
-.nav{
-padding:0 20px;
-}
-
-.nav-links{
-gap:12px;
-font-size:13px;
-}
-
 .hero h1{
-font-size:38px;
+font-size:40px;
+}
+
+.nav{
+padding:15px 20px;
 }
 
 }
@@ -187,14 +200,12 @@ font-size:38px;
 
 <body>
 
-<!-- NAVBAR -->
+<!-- NAV -->
 <div class="nav">
 
-    <!-- LOGO -->
-    <img src="logo.jpeg" alt="Logo">
+    <img src="logo.jpeg" alt="logo">
 
-    <!-- MENU -->
-    <div class="nav-links">
+    <div>
         <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#products">Products</a>
@@ -207,9 +218,10 @@ font-size:38px;
 <div class="hero" id="home">
 
     <div class="hero-content">
-        <h1>Microgreens India 🌱</h1>
+        <h1>AUVIRO</h1>
         <p>
-            From seed to superfood — building health, income & future farming opportunities in India.
+            Premium Microgreens Farming • Nutrition • Modern Urban Agriculture  
+            Building India’s future of healthy food & smart farming business
         </p>
 
         <button class="btn">Explore Now</button>
@@ -220,32 +232,51 @@ font-size:38px;
 <!-- ABOUT -->
 <div class="section" id="about">
 
-<h2>About Microgreens</h2>
+<h2>About Auviro</h2>
 
-<p>
-Microgreens are young, highly nutritious plants harvested in 7–15 days.
-They contain powerful vitamins and are used in modern healthy diets, restaurants, and fitness lifestyles.
-</p>
+<div class="about">
+Auviro is a modern microgreens brand focused on clean nutrition, urban farming, and high-value food production.
+We aim to bring farm-fresh superfoods directly to homes, restaurants, and health-conscious communities.
+</div>
 
 </div>
 
 <!-- PRODUCTS -->
 <div class="section" id="products">
 
-<h2>Our Vision</h2>
+<h2>Our Microgreens</h2>
 
-<p>
-To bring fresh, organic, and profitable microgreens farming into every Indian home and business.
-</p>
+<div class="grid">
+
+<div class="card">
+<h3>Sunflower</h3>
+<p>High protein, crunchy texture, chef favorite.</p>
+</div>
+
+<div class="card">
+<h3>Pea Shoots</h3>
+<p>Sweet taste, high demand in restaurants.</p>
+</div>
+
+<div class="card">
+<h3>Radish</h3>
+<p>Fast growth cycle, spicy flavor, high profit.</p>
+</div>
+
+<div class="card">
+<h3>Broccoli</h3>
+<p>Superfood rich in antioxidants and nutrients.</p>
+</div>
 
 </div>
 
-<!-- CONTACT -->
+</div>
+
+<!-- CTA -->
 <div class="cta" id="contact">
 
-<h2>Start Your Microgreens Journey</h2>
-
-<p>Contact us today and build your own microgreens business</p>
+<h2>Start Your Microgreens Business Today</h2>
+<p>Learn farming, selling & earning model</p>
 
 <div class="phone">📞 +91-XXXXXXXXXX</div>
 
@@ -253,7 +284,7 @@ To bring fresh, organic, and profitable microgreens farming into every Indian ho
 
 <!-- FOOTER -->
 <div class="footer">
-© 2026 Microgreens India | All Rights Reserved
+© 2026 Auviro Microgreens | All Rights Reserved
 </div>
 
 </body>
