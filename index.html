@@ -1,40 +1,65 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Auviro Microgreens</title>
+<title>Microgreens India</title>
 
 <style>
 
-body{
+/* RESET */
+*{
 margin:0;
-font-family:Arial;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:Arial, sans-serif;
 background:#0b1f14;
 color:white;
 }
 
-/* NAV */
+/* NAVBAR */
 .nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:15px 30px;
-background:rgba(0,0,0,0.6);
 position:fixed;
-width:100%;
 top:0;
+left:0;
+width:100%;
+height:70px;
+background:rgba(0,0,0,0.75);
+backdrop-filter: blur(10px);
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:0 40px;
+z-index:1000;
 }
 
+/* LOGO */
 .nav img{
 height:45px;
+width:auto;
 border-radius:8px;
 }
 
-.nav a{
+/* MENU */
+.nav-links{
+display:flex;
+gap:25px;
+}
+
+.nav-links a{
 color:white;
-margin:0 10px;
 text-decoration:none;
+font-size:15px;
+opacity:0.8;
+transition:0.3s;
+}
+
+.nav-links a:hover{
+color:#00ff88;
+opacity:1;
 }
 
 /* HERO */
@@ -46,65 +71,114 @@ align-items:center;
 justify-content:center;
 text-align:center;
 position:relative;
+padding:20px;
 }
 
 .hero::after{
 content:"";
 position:absolute;
-top:0;left:0;
-width:100%;height:100%;
+top:0;
+left:0;
+width:100%;
+height:100%;
 background:rgba(0,0,0,0.6);
 }
 
 .hero-content{
 position:relative;
 z-index:2;
+max-width:800px;
+margin-top:70px;
 }
 
 .hero h1{
-font-size:50px;
+font-size:55px;
 color:#00ff88;
+margin-bottom:15px;
+}
+
+.hero p{
+font-size:18px;
+opacity:0.9;
+line-height:1.6;
 }
 
 .btn{
-padding:12px 25px;
+margin-top:20px;
+padding:12px 28px;
 background:#00ff88;
 border:none;
-border-radius:25px;
+border-radius:30px;
 font-weight:bold;
 cursor:pointer;
 }
 
 /* SECTION */
 .section{
-padding:80px 20px;
-max-width:900px;
+padding:100px 20px;
+max-width:1000px;
 margin:auto;
 }
 
 .section h2{
 color:#00ff88;
+font-size:32px;
+margin-bottom:20px;
+text-align:center;
 }
 
 .section p{
 line-height:1.8;
 opacity:0.9;
+font-size:17px;
+text-align:center;
 }
 
 /* CTA */
 .cta{
-background:#00c853;
+background:linear-gradient(135deg,#00c853,#64dd17);
 color:black;
-padding:50px;
 text-align:center;
-border-radius:15px;
-margin:40px 20px;
+padding:60px 20px;
+border-radius:20px;
+margin:60px 20px;
 }
 
+.cta h2{
+font-size:30px;
+margin-bottom:10px;
+}
+
+.phone{
+font-size:22px;
+font-weight:bold;
+margin-top:10px;
+}
+
+/* FOOTER */
 .footer{
 text-align:center;
 padding:20px;
 background:black;
+opacity:0.8;
+}
+
+/* MOBILE RESPONSIVE */
+@media(max-width:768px){
+
+.nav{
+padding:0 20px;
+}
+
+.nav-links{
+gap:12px;
+font-size:13px;
+}
+
+.hero h1{
+font-size:38px;
+}
+
 }
 
 </style>
@@ -113,14 +187,17 @@ background:black;
 
 <body>
 
-<!-- NAV -->
+<!-- NAVBAR -->
 <div class="nav">
 
+    <!-- LOGO -->
     <img src="logo.jpeg" alt="Logo">
 
-    <div>
+    <!-- MENU -->
+    <div class="nav-links">
         <a href="#home">Home</a>
         <a href="#about">About</a>
+        <a href="#products">Products</a>
         <a href="#contact">Contact</a>
     </div>
 
@@ -131,8 +208,11 @@ background:black;
 
     <div class="hero-content">
         <h1>Microgreens India 🌱</h1>
-        <p>Grow Healthy. Grow Wealthy.</p>
-        <button class="btn">Get Started</button>
+        <p>
+            From seed to superfood — building health, income & future farming opportunities in India.
+        </p>
+
+        <button class="btn">Explore Now</button>
     </div>
 
 </div>
@@ -143,25 +223,37 @@ background:black;
 <h2>About Microgreens</h2>
 
 <p>
-Microgreens are nutrient-rich young plants harvested in 7–15 days.
-They are used in hotels, gyms, and modern healthy lifestyles.
-This is a fast-growing business opportunity in India.
+Microgreens are young, highly nutritious plants harvested in 7–15 days.
+They contain powerful vitamins and are used in modern healthy diets, restaurants, and fitness lifestyles.
 </p>
 
 </div>
 
-<!-- CTA -->
+<!-- PRODUCTS -->
+<div class="section" id="products">
+
+<h2>Our Vision</h2>
+
+<p>
+To bring fresh, organic, and profitable microgreens farming into every Indian home and business.
+</p>
+
+</div>
+
+<!-- CONTACT -->
 <div class="cta" id="contact">
 
-<h2>Start Your Microgreens Business</h2>
+<h2>Start Your Microgreens Journey</h2>
 
-<p>Contact: +91-XXXXXXXXXX</p>
+<p>Contact us today and build your own microgreens business</p>
+
+<div class="phone">📞 +91-XXXXXXXXXX</div>
 
 </div>
 
 <!-- FOOTER -->
 <div class="footer">
-© 2026 Microgreens India
+© 2026 Microgreens India | All Rights Reserved
 </div>
 
 </body>
